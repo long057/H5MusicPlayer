@@ -1,0 +1,184 @@
+@import 'base.css';
+body {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+body .music_wrap {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding-top: 60px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+body .music_wrap .song_img {
+  position: relative;
+  width: 50%;
+  height: 0;
+  padding-top: 50%;
+  margin: 0 auto;
+}
+body .music_wrap .song_img .img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+body .music_wrap .song_img .img img {
+  width: 100%;
+  height: 100%;
+}
+body .music_wrap .song_info {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+body .music_wrap .song_info .song_name {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.86);
+}
+body .music_wrap .song_info .singer,
+body .music_wrap .song_info .album {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 8px;
+}
+body .music_wrap .pro {
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+}
+body .music_wrap .pro .cur_time,
+body .music_wrap .pro .all_time {
+  color: #fff;
+  width: 80px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+body .music_wrap .pro .pro_wrap {
+  flex: 1;
+  position: relative;
+  height: 40px;
+  overflow: hidden;
+}
+body .music_wrap .pro .pro_wrap .pro_top,
+body .music_wrap .pro .pro_wrap .pro_bottom {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+body .music_wrap .pro .pro_wrap .pro_top {
+  position: relative;
+  background-color: #ffffff;
+  transform: translateX(-100%);
+}
+body .music_wrap .pro .pro_wrap .pro_top .slider {
+  position: absolute;
+  right: -12px;
+  top: -11px;
+  width: 21px;
+  height: 21px;
+}
+body .music_wrap .pro .pro_wrap .pro_top .slider::after {
+  position: absolute;
+  top: 7px;
+  right: 4px;
+  width: 8px;
+  height: 8px;
+  content: '';
+  border-radius: 50%;
+  background-color: #fff;
+}
+body .music_wrap .control {
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+body .music_wrap .control .btn {
+  flex: 1;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: center;
+}
+body .music_wrap .control .like_btn {
+  background-image: url(../images/icon-like.png);
+}
+body .music_wrap .control .like_btn.liking {
+  background-image: url(../images/icon-like-solid.png);
+}
+body .music_wrap .control .prev_btn {
+  background-image: url(../images/icon-prev.png);
+}
+body .music_wrap .control .next_btn {
+  background-image: url(../images/icon-next.png);
+}
+body .music_wrap .control .play_btn {
+  background-image: url(../images/icon-play.png);
+}
+body .music_wrap .control .play_btn.playing {
+  background-image: url(../images/icon-pause.png);
+}
+body .music_wrap .control .list_btn {
+  background-image: url(../images/icon-list.png);
+}
+body .music_wrap .control .list_btn.playList {
+  background-image: url(../images/icon-playlist.png);
+}
+body .music_wrap .play_list {
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  background: #ffffff;
+}
+body .music_wrap .play_list.show {
+  bottom: 50px;
+  transition: bottom 0.3s linear;
+}
+body .music_wrap .play_list .play_header {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  padding-left: 10px;
+}
+body .music_wrap .play_list .list_wrap {
+  width: 100%;
+}
+body .music_wrap .play_list .list_wrap li {
+  height: 30px;
+  padding: 0 10px;
+  line-height: 30px;
+  font-size: 14px;
+}
+body .music_wrap .play_list .list_wrap li h3 {
+  font-weight: normal;
+  font-size: 14px;
+}
+body .music_wrap .play_list .list_wrap li h3 span {
+  font-size: 14px;
+}
+body .music_wrap .play_list .list_wrap li.active {
+  color: red;
+}
+body .music_wrap .play_list .close {
+  position: absolute;
+  top: 7px;
+  right: 20px;
+  font-size: 14px;
+  color: #aaa;
+}
